@@ -50,14 +50,27 @@ header {
         }
     }
 
-    nav {
-        ul{
-            li {
-                list-style: none;
-                
-                a{
-                    color: $cBlack;
-                    text-decoration: none;
+}
+
+nav {
+    ol{
+        margin-top: 2rem;
+        li {
+            list-style: none;
+            margin-bottom: 2rem;
+            position: relative;
+            
+            a {
+                color: $cBlack;
+                text-decoration: none;
+                font-size: 1.5rem;
+                font-family: sans-serif;
+                font-weight: 600;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    right: 17px;
                 }
             }
         }
