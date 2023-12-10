@@ -6,8 +6,8 @@
     <title>Sumo&Co</title>
     <link rel="stylesheet" href="css/style.css" />
     
-    <script src="https://kit.fontawesome.com/07999b337a.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/07999b337a.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div>
@@ -21,25 +21,35 @@
     </header>
     <nav>
       <ol>
-        <li><a class="fa-solid fa-chevron-right" href="#">商品情報</a></li>
-        <ul>
+      
+        <li class="nav-list">
+          <button class="nav-btn fa-solid fa-chevron-right">商品情報</button>
+          <ul class="nav-list-menu">
             <li class="nav-list-item"><a href="#">新商品</a></li>
             <li class="nav-list-item"><a href="#">コーヒー豆</a></li>
-            <li class="nav-list-item"><a href="#">フード</a></li>
-            <li class="nav-list-item"><a href="#">グッズ</a></li>
-        </ul>
-        <li><a class="fa-solid fa-chevron-right" href="#">キャンペーン</a></li>
-        <ul>
+              <li class="nav-list-item"><a href="#">フード</a></li>
+              <li class="nav-list-item"><a href="#">グッズ</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-list">
+          <button class="nav-btn fa-solid fa-chevron-right">キャンペーン</button>
+          <ul class="nav-list-menu">
             <li class="nav-list-item"><a href="#">珈琲と共に味を発見する旅CP</a></li>
             <li class="nav-list-item"><a href="#">タンブラーが当たる</a></li>
-            <li class="nav-list-item"><a href="#">オーダーメイド豆</a></li>
-        </ul>
-        <li><a class="fa-solid fa-chevron-right" href="#">会社情報</a></li>
-        <ul>
+              <li class="nav-list-item"><a href="#">オーダーメイド豆CP</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-list">
+          <button class="nav-btn fa-solid fa-chevron-right">会社情報</button>
+          <ul class="nav-list-menu">
             <li class="nav-list-item"><a href="#">企業情報</a></li>
             <li class="nav-list-item"><a href="#">IR情報</a></li>
-            <li class="nav-list-item"><a href="#">経営方針</a></li>
-        </ul>
+              <li class="nav-list-item"><a href="#">経営方針</a></li>
+          </ul>
+        </li>
+
       </ol>
     </nav>
       <main></main>
