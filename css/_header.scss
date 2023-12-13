@@ -53,6 +53,13 @@ header {
 }
 
 nav {
+    height: 0;
+    overflow: hidden;
+    
+&.menu-open{
+    height: auto;
+    overflow: auto;
+}
     ol{
         margin-top: 2rem;
         .nav-list {

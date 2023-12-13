@@ -73,6 +73,14 @@ header .mobile-menu-icon.menu-open span:nth-child(3) {
   transform: translateY(-11px) rotate(-45deg);
 }
 
+nav {
+  height: 0;
+  overflow: hidden;
+}
+nav.menu-open {
+  height: auto;
+  overflow: auto;
+}
 nav ol {
   margin-top: 2rem;
 }
