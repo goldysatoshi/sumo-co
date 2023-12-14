@@ -1,8 +1,8 @@
 const menuBtn = document.querySelector(".mobile-menu-icon");
-const nav = document.documentElement(nav);
+const headerNav = document.querySelector("#header-nav");
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("menu-open");
-  nav.classList.toggle("menu-open");
+  headerNav.classList.toggle("menu-open");
 });
 
 const navLists = document.querySelectorAll(".nav-list");
@@ -14,7 +14,8 @@ navLists.forEach((navList, index) => {
 
     navLists.forEach((navList, index) => {
       if (openIndex !== index) {
-        navList.parentNode.classList.remove("list-opne");
+        console.log(navList);
+        navList.classList.remove("list-open");
       }
     });
   });
