@@ -4,12 +4,68 @@ header {
     display: flex;
     justify-content: space-around;
 
+    @include  mq(lg) {
+
+    }
+
     h1 {
         a {
             font-family: sans-serif;
             color: $cBlack;
             text-decoration: none;
-            
+        }
+    }
+
+    .dt-menu {
+        display: none;
+        @include mq(lg) {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            .dt-nav-list {
+                list-style: none;
+                margin-left: 3rem;
+                position: relative;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    outline: none !important;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+
+                    &::before {
+                        position: absolute;
+                        top: 0px;
+                        right: -20px;
+                        transform: rotate(90deg);
+                    }
+
+                    &:hover {
+                        color: $cWineRed;
+                    }
+                }
+
+                &-menu {
+                    margin-top: 20px;
+                    .dt-nav-list-item {
+                        list-style: none;
+                        margin-bottom: 10px;
+
+                        a {
+                            text-decoration: none;
+                            color: $cBlack;
+
+                            &:hover {
+                                color: $cWineRed;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 
@@ -18,6 +74,10 @@ header {
         border: none;
         outline: none !important;
         cursor: pointer;
+
+        @include mq(lg) {
+            display: none;
+        }
         
         span {
             background-color: $cBlack;
@@ -54,11 +114,16 @@ header {
 
 nav {
     height: 0;
+    opacity: 0;
     overflow: hidden;
+    z-index: 10;
+    // position: fixed;
+    transition: ease-in-out 1s;
     
 &.menu-open{
-    height: auto;
+    height: 100%;
     overflow: auto;
+    opacity: 1;
 }
     ol{
         margin-top: 2rem;
@@ -81,13 +146,18 @@ nav {
                     position: absolute;
                     top: 5px;
                     right: 17px;
+                    transition: .3s;
+                    // transform: rotate(90deg);
+                    // color: $cWineRed;
                 }
+
             }
 
             & > .nav-list-menu {
                 list-style: none;
                 max-height: 0;
                 overflow: hidden;
+                transition: ease .3s;
                 a {
                     color: $cBlack;
                     text-decoration: none;
@@ -104,11 +174,17 @@ nav {
             }
 
             &.list-open {
-                .nav-list-menu {
+                & > .nav-btn {
+                    &::before {
+                        transform: rotate(90deg);
+                        color: $cWineRed;
+                    }
+                }
+
+                & > .nav-list-menu {
                 width: 100%;
                 max-height: 9999px;
-                height: auto;
-
+                height: 100%;
             }
         }
 
