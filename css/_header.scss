@@ -20,7 +20,7 @@ header {
         display: none;
         @include mq(lg) {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-top: 20px;
 
             .dt-nav-list {
@@ -41,15 +41,22 @@ header {
                         top: 0px;
                         right: -20px;
                         transform: rotate(90deg);
+                        transition: ease .3s;
                     }
 
-                    &:hover {
-                        color: $cWineRed;
-                    }
+                    
                 }
 
                 &-menu {
+                    height: 0px;
+                    max-height: 0px;
+                    overflow: hidden;
+                    width: 200px;
                     margin-top: 20px;
+                    opacity: 0;
+                    transition: ease .3s;
+
+                    
                     .dt-nav-list-item {
                         list-style: none;
                         margin-bottom: 10px;
@@ -62,6 +69,20 @@ header {
                                 color: $cWineRed;
                             }
                         }
+                    }
+                }
+
+                &.dt-list-open {
+                    button {
+                        &::before {
+                            color: $cWineRed;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    .dt-nav-list-menu {
+                    height: 150px;
+                    max-height: 9999px;
+                    opacity: 1;
                     }
                 }
             }
