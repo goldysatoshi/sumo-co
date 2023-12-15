@@ -51,7 +51,7 @@ header .dt-menu {
 @media (min-width: 960px) {
   header .dt-menu {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
   }
   header .dt-menu .dt-nav-list {
@@ -72,12 +72,16 @@ header .dt-menu {
     top: 0px;
     right: -20px;
     transform: rotate(90deg);
-  }
-  header .dt-menu .dt-nav-list button:hover {
-    color: #f10a0a;
+    transition: ease 0.3s;
   }
   header .dt-menu .dt-nav-list-menu {
+    height: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    width: 200px;
     margin-top: 20px;
+    opacity: 0;
+    transition: ease 0.3s;
   }
   header .dt-menu .dt-nav-list-menu .dt-nav-list-item {
     list-style: none;
@@ -89,6 +93,15 @@ header .dt-menu {
   }
   header .dt-menu .dt-nav-list-menu .dt-nav-list-item a:hover {
     color: #f10a0a;
+  }
+  header .dt-menu .dt-nav-list.dt-list-open button::before {
+    color: #f10a0a;
+    transform: rotate(-90deg);
+  }
+  header .dt-menu .dt-nav-list.dt-list-open .dt-nav-list-menu {
+    height: 150px;
+    max-height: 9999px;
+    opacity: 1;
   }
 }
 header .mobile-menu-icon {

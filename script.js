@@ -1,3 +1,4 @@
+// モバイルメニュースライド
 const menuBtn = document.querySelector(".mobile-menu-icon");
 const headerNav = document.querySelector("#header-nav");
 menuBtn.addEventListener("click", () => {
@@ -5,6 +6,7 @@ menuBtn.addEventListener("click", () => {
   headerNav.classList.toggle("menu-open");
 });
 
+// モバイルメニューアイテム
 const navLists = document.querySelectorAll(".nav-list");
 
 navLists.forEach((navList, index) => {
@@ -14,8 +16,24 @@ navLists.forEach((navList, index) => {
 
     navLists.forEach((navList, index) => {
       if (openIndex !== index) {
-        console.log(navList);
         navList.classList.remove("list-open");
+      }
+    });
+  });
+});
+
+// デスクトップメニューアイテム
+
+const dtNavLists = document.querySelectorAll(".dt-nav-list");
+
+dtNavLists.forEach((dtNavList, index) => {
+  dtNavList.addEventListener("click", (e) => {
+    openIndex = index;
+    e.target.parentNode.classList.toggle("dt-list-open");
+
+    dtNavLists.forEach((dtNavList, index) => {
+      if (openIndex !== index) {
+        dtNavList.classList.remove("dt-list-open");
       }
     });
   });
