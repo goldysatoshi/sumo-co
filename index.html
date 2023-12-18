@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sumo&Co</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <script
@@ -11,6 +12,7 @@
       src="https://kit.fontawesome.com/07999b337a.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="swiper-bundle.min.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -22,7 +24,7 @@
           <li class="dt-nav-list">
             <button class="fa-solid fa-chevron-right">商品情報</button>
             <ul class="dt-nav-list-menu">
-              <li class="dt-nav-list-item"><a href="#">新商品</span></a></li>
+              <li class="dt-nav-list-item"><a href="#">新商品</a></li>
               <li class="dt-nav-list-item"><a href="#">コーヒー豆</a></li>
               <li class="dt-nav-list-item"><a href="#">フード</a></li>
               <li class="dt-nav-list-item"><a href="#">グッズ</a></li>
@@ -95,7 +97,28 @@
           </li>
         </ol>
       </nav>
-      <main></main>
+      <main>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </main>
       <section class="company"></section>
       <section class="products"></section>
       <section class="newrelease"></section>
