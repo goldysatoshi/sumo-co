@@ -1,1 +1,8 @@
 @use 'globals' as *;
+
+main {
+    .swiper {
+        width: 100%;
+        height: 300px;
+    }
+}
