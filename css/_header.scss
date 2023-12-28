@@ -3,6 +3,9 @@
 header {
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
 
     @include  mq(lg) {
 
@@ -21,7 +24,7 @@ header {
         @include mq(lg) {
             display: flex;
             align-items: flex-start;
-            margin-top: 20px;
+            margin-top: 16px;
 
             .dt-nav-list {
                 list-style: none;
@@ -83,6 +86,7 @@ header {
                     height: 150px;
                     max-height: 9999px;
                     opacity: 1;
+                    background-color: $cWhite;
                     }
                 }
             }
@@ -138,8 +142,13 @@ nav {
     opacity: 0;
     overflow: hidden;
     z-index: 10;
-    // position: fixed;
     transition: ease-in-out 1s;
+    position: fixed;
+    background-color: $cWhite;
+    top: 55px;
+    width: 100vw;
+
+
     
 &.menu-open{
     height: 100%;
@@ -179,6 +188,7 @@ nav {
                 max-height: 0;
                 overflow: hidden;
                 transition: ease .3s;
+
                 a {
                     color: $cBlack;
                     text-decoration: none;
