@@ -39,6 +39,9 @@ p, h1, h2, h3, h4, h5, h6 {
 header {
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
 }
 header h1 a {
   font-family: sans-serif;
@@ -52,7 +55,7 @@ header .dt-menu {
   header .dt-menu {
     display: flex;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 16px;
   }
   header .dt-menu .dt-nav-list {
     list-style: none;
@@ -102,6 +105,7 @@ header .dt-menu {
     height: 150px;
     max-height: 9999px;
     opacity: 1;
+    background-color: white;
   }
 }
 header .mobile-menu-icon {
@@ -143,6 +147,10 @@ nav {
   overflow: hidden;
   z-index: 10;
   transition: ease-in-out 1s;
+  position: fixed;
+  background-color: white;
+  top: 55px;
+  width: 100vw;
 }
 nav.menu-open {
   height: 100%;
@@ -200,13 +208,27 @@ nav ol .nav-list.list-open > .nav-list-menu {
   height: 100%;
 }
 
+main {
+  position: absolute;
+  top: 55px;
+}
+@media (min-width: 960px) {
+  main {
+    top: 60px;
+  }
+}
 main .swiper {
-  width: 100%;
-  height: 600px;
+  width: 100vw;
+  height: auto;
+}
+@media (min-width: 960px) {
+  main .swiper {
+    height: 650px;
+  }
 }
 main .swiper .swiper-slide img {
-  width: 100%;
-  height: 600px;
+  width: 100vw;
+  height: auto;
   display: block;
   margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
