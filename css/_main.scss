@@ -25,5 +25,26 @@ main {
                     }
 
         }
+
+        .swiper-button-next:after {
+                color: $cWhite;
+            }
+
+        .swiper-button-prev:after {
+        color: $cWhite;
+        }
+
+        .swiper-pagination-bullet{
+            background-color: $cWhite;
+            opacity: 0.3;
+            height: 10px;
+            width: 10px;
+        }
+
+        .swiper-pagination-bullet-active {
+            // background-color: $cWhite;
+            // --swiper-theme-color: $cWhite;
+            opacity: 1;
+        }
     }
 }
