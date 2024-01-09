@@ -246,4 +246,13 @@ main .swiper .swiper-pagination-bullet {
 }
 main .swiper .swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+.company-policy {
+  max-width: 1080px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
 }/*# sourceMappingURL=style.css.map */
