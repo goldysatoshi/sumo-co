@@ -38,12 +38,13 @@ p, h1, h2, h3, h4, h5, h6 {
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100vw;
+  padding: 0 30px;
 }
 header h1 a {
   font-family: sans-serif;
@@ -260,4 +261,40 @@ main .swiper .swiper-pagination-bullet-active {
   .company-policy {
     padding: 60px 20%;
   }
+}
+
+.products-wrapper {
+  padding: 0 30px;
+}
+.products-wrapper h3 {
+  padding-bottom: 20px;
+}
+.products-wrapper .products-item {
+  width: 100%;
+}
+.products-wrapper .products-item-contents {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+}
+@media (min-width: 489px) {
+  .products-wrapper .products-item-contents {
+    width: 30%;
+    display: inline-flex;
+    margin: 20px;
+  }
+}
+.products-wrapper .products-item-contents a {
+  text-decoration: none;
+  color: black;
+}
+.products-wrapper .products-item-contents a img {
+  border-radius: 10px 10px 0 0;
+}
+.products-wrapper .products-item-contents a h4 {
+  padding: 10px 0 10px 5px;
+}
+.products-wrapper .products-item-contents a p {
+  padding-left: 5px;
 }/*# sourceMappingURL=style.css.map */
