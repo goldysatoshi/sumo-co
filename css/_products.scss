@@ -12,6 +12,10 @@
 
         .products-item {
             width: 100%;
+
+            @include mq(sm) {
+               
+            }
             
             &-contents {
                 padding-bottom: 30px;
@@ -20,9 +24,11 @@
                 border-radius: 10px;
 
                     @include mq(sm) {
+                            box-sizing: border-box;
+                            height: 20%;
                             width: 30%;
+                            margin: 1%;
                             display: inline-flex;
-                            margin: 20px;
                         }
 
                 a {
