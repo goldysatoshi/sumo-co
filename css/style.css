@@ -280,9 +280,11 @@ main .swiper .swiper-pagination-bullet-active {
 }
 @media (min-width: 489px) {
   .products-wrapper .products-item-contents {
+    box-sizing: border-box;
+    height: 20%;
     width: 30%;
+    margin: 1%;
     display: inline-flex;
-    margin: 20px;
   }
 }
 .products-wrapper .products-item-contents a {
