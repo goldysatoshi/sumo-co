@@ -1,6 +1,8 @@
 @use 'globals' as *;
 
 header {
+    max-width: 1080px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     position: fixed;
