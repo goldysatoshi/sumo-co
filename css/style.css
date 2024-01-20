@@ -289,6 +289,7 @@ main .swiper .swiper-pagination-bullet-active {
     width: 30%;
     margin: 1%;
     display: inline-flex;
+    min-height: 255px;
   }
 }
 .products-wrapper .products-item-contents a {
