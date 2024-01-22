@@ -310,4 +310,16 @@ main .swiper .swiper-pagination-bullet-active {
   max-width: 1080px;
   margin: 0 auto;
   padding: 30px;
+}
+
+.campaign-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.news-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px;
 }/*# sourceMappingURL=style.css.map */
