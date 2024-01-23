@@ -275,8 +275,11 @@ main .swiper .swiper-pagination-bullet-active {
 }
 .products-wrapper .products-item {
   width: 100%;
+  display: flex;
+  overflow-x: scroll;
 }
 .products-wrapper .products-item-contents {
+  flex-shrink: 0;
   padding-bottom: 30px;
   margin-bottom: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
